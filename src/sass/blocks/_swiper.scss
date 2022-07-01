@@ -1,0 +1,78 @@
+.swiper {
+  width: 100%;
+  height: 50vh;
+  @include tablet {
+    height: 30vh;
+  }
+  @include desktop {
+    height: 70vh;
+  }
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    background: $light-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-button-next,
+  &-button-prev {
+    color: $light-color !important;
+    opacity: 1 !important;
+    top: 85% !important;
+    @include tablet {
+      top: 50% !important;
+    }
+  }
+  &-button-next:after,
+  &-button-prev:after {
+    font-weight: bold;
+    font-size: 60px;
+  }
+  &-container {
+    background: $dark-color;
+    width: 100%;
+    height: 100%;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    @include desktop{
+        width: 50%;
+    }
+    img {
+      width: 80%;
+      height: 50px;
+      object-fit: contain;
+      @include tablet {
+        height: 80px;
+      }
+      @include desktop {
+        width: 100%;
+        height: 110px;
+      }
+    }
+    &__title {
+      font-size: 16px;
+      padding-top: 30px;
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+    &__paragraph {
+      font-size: 14px;
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+  }
+}

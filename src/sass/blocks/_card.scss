@@ -1,0 +1,68 @@
+.cards {
+  padding: 22px;
+  margin: auto;
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+  @include maxWidth;
+  .card {
+    &__title,
+    &__subtitle,
+    &__description,
+    &__director {
+      color: $dark-color;
+      font-weight: bold;
+    }
+    &__title,
+    &__subtitle {
+      font-size: 22px;
+    }
+    &__director {
+      font-size: 15px;
+      margin-top: 0;
+    }
+    &__subtitle {
+      margin-bottom: 0;
+    }
+  }
+  .card:last-child > .card__title {
+    font-size: 25px;
+    font-weight: $font-regular;
+    @include tablet {
+      grid-area: 2/2;
+      margin-left: 1.5rem;
+      margin-top: 10%;
+    }
+  }
+  .card:last-child {
+    @include tablet {
+      display: grid;
+      grid-template-columns: 40% 70%;
+      width: 160%;
+      grid-template-rows: 10% 90%;
+      margin-bottom: 50px;
+    }
+    @include laptop {
+      grid-template-columns: 30% 90%;
+    }
+  }
+  .card:last-child > img {
+    @include tablet {
+      grid-area: 2/1;
+      align-self: center;
+      max-width: 258px;
+    }
+  }
+  .card:last-child > .card__description {
+    font-weight: $font-regular;
+    @include tablet {
+      grid-area: 2/2;
+      height: 50%;
+      align-self: center;
+      margin-left: 1.5em;
+      margin-top: 15%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+nav#main-nav.main-nav
+    ul#main-menu.main-menu
+        each page, index in pages
+            if page.title == pageActive
+                li.main-menu__item
+                        a(href=`/${page.link}/`).main-menu__link.main-menu__link--active= page.title
+            else
+                li.main-menu__item
+                        a(href=`/${page.link}/`).main-menu__link= page.title

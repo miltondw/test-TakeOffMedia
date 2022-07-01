@@ -1,0 +1,10 @@
+.cards
+    each card in cards
+        .card
+            h2.card__title= card.title
+            img(src=card.img, alt=card.title)
+            h2.card__subtitle= card.subtitle
+            if card.description 
+                p.card__description= card.description
+            else 
+            h3.card__director= card.director

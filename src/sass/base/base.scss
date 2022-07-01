@@ -1,0 +1,16 @@
+body {
+  background-color: $light-color;
+  color: $light-color;
+  min-height: 100vh;
+  font-family: $font, "sans-serif";
+  overflow-x: hidden;
+}
+.slider {
+  width: 100%;
+  height: 333px;
+  background: $dark-color;
+}
+img {
+  width: 100%;
+  object-fit: contain;
+}

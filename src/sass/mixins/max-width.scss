@@ -1,0 +1,9 @@
+@mixin maxWidth {
+  @include laptop {
+    max-width: $container-laptop;
+    margin: auto;
+  }
+  @include desktop {
+    max-width: $container-desktop;
+  }
+}

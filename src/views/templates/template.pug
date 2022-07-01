@@ -1,0 +1,77 @@
+include ../config/config
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous")
+        link(rel="shortcut icon" type="image/png" href="/images/favicon.png")
+        block head
+
+    body
+        .header__container 
+            header#header.header
+                a(href="/").logo
+                    img(src="/images/logo.png" alt="FACIUNI")
+                .toggle-menu
+                    #toggle-menu.toggle-menu__icon
+                        .first-bar
+                        .second-bar
+                        .third-bar
+            #sidebar.sidebar
+                block menu
+        main.main
+            block main
+        footer.footer
+            .footer__container 
+                .footer__content
+                    .footer__content-item 
+                        img(src="/images/logo-footer.png" alt="FACIUNI").footer__img
+                        .footer__email 
+                            h4.footer__email-title Ligia Leon, Area Manager
+                            a(href="mailto://lleon@directv.com").footer__email-email lleon@directv.com 
+                        nav.footer__nav
+                            ul.footer__menu
+                                li.footer__menu-item 
+                                    a(href="https://faciuni.com/uy/calendario" target="_blank") Calendario 
+                                li.footer__menu-item 
+                                    a(href="https://faciuni.com/uy/socios" target="_blank") Socios 
+                                li.footer__menu-item 
+                                    a(href="https://faciuni.com/uy/universidades" target="_blank") Universidades 
+                    nav.footer__nav
+                        ul.footer__social
+                            li.footer__social-item
+                                a(href="https://www.facebook.com/faciuniBecas/" target="_blank")
+                                    img(src="/images/social-media/facebook.png" alt="logo de facebook").footer__social-icon 
+                                    p.footer__social-title Facebook
+                            li.footer__social-item
+                                a(href="https://twitter.com/FACIUNIBecas" target="_blank") 
+                                    img(src="/images/social-media/twitter.png" alt="logo de twitter").footer__social-icon
+                                    p.footer__social-title Twitter
+                            li.footer__social-item
+                                a(href="https://www.youtube.com/channel/UCRz1ct0514QHPoM_FFPhhuQ" target="_blank") 
+                                    img(src="/images/social-media/youtube.png" alt="logo de youtube").footer__social-icon
+                                    p.footer__social-title Youtube
+                            li.footer__social-item
+                                a(href="https://www.instagram.com/Faciunibecas/" target="_blank") 
+                                    img(src="/images/social-media/instagram.png" alt="logo de instagram").footer__social-icon
+                                    p.footer__social-title Instagram
+                .footer__line
+                .footer__content
+                    .footer__clients
+                        a(href="").footer__clients-img
+                            img(src="/images/logos/directv.png" alt="log de directv").footer__clients-img
+                        a(href="").footer__clients-img
+                            img(src="/images/logos/globo.png" alt="log de globo").footer__clients-img
+                        a(href="").footer__clients-img
+                            img(src="/images/logos/sky.png" alt="log de sky").footer__clients-img
+                    a(href="").footer__clients-img
+                        img(src="/images/logos/grupo.png" alt="logo de ICAU y Uruguay audiovisual").footer__clients-img
+
+
+
+
+                    p.footer__copy 2018 - FACIUNI is a program by DIRECTVCINEMA+
+        block scripts
+        script(src="/js/scripts-min.js")

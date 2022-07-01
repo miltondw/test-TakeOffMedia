@@ -1,0 +1,18 @@
+.header {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  height: 90px;
+
+  @include maxWidth;
+
+  .logo {
+    width: 110px;
+    height: 32px;
+    margin-left: 20px;
+    z-index: 1;
+  }
+}
+.header__container {
+  @include maxWidth;
+}

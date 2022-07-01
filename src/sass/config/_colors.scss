@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #001426;
+  --secondary-color: #b7a063;
+  --bg-color: #000a13;
+  --light-color: #ffffff;
+  --dark-color: #000000;
+}
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$bg-color: var(--bg-color);
+$light-color: var(--light-color);
+$dark-color: var(--dark-color);

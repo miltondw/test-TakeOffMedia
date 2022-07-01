@@ -1,0 +1,41 @@
+.home {
+  min-height: 100vh;
+  &-container {
+    display: grid;
+    grid-template-columns: 14% 30% 56%;
+    margin: auto;
+    max-width: 85%;
+    margin-top: 4em;
+    grid-gap: 2em;
+    justify-content: center;
+  }
+  &-titles{
+    padding-left: 1em;
+  }
+  &-title {
+    font: bold 50px/40px "Source Sans Pro", serif;
+    color: $dark-color;
+    margin: 0;
+    margin-bottom: 0.3em;
+  }
+  &-subtitle {
+    font: normal 18px/25px "Source Sans Pro", sans-serif;
+    letter-spacing: -0.025em;
+    color: #333;
+    margin: 0;
+    font-weight: 500;
+  }
+  &-paragraph {
+    &__title {
+      font: normal 18px/25px "Source Sans Pro", sans-serif;
+      letter-spacing: -0.025em;
+      color: #333;
+      font-weight: $font-regular;
+    }
+  }
+
+  &-img {
+    width: 139px;
+    height: 155px;
+  }
+}

@@ -1,0 +1,78 @@
+.sidebar {
+  transform: translateY(-100vh);
+  transition: transform 0.5s ease-in;
+  z-index: 2;
+  @include tablet {
+    transform: translateY(0);
+  }
+}
+.sidebar.show {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: $bg-color;
+  top: 0;
+  transform: translateY(0);
+  transition: transform 0.6s;
+}
+.main-nav {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  @include tablet{
+    height: 0;
+
+  }
+}
+.main-menu.show {
+  transform: translateY(0);
+  transition: transform 0.6s;
+}
+.main-menu {
+  @include reset-list;
+  position: relative;
+  top: 150px;
+  width: 100%;
+  height: 82vh;
+  transform: translateY(-100vh);
+
+  @include tablet {
+    top: -90px;
+    height: 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    transform: translateY(0);
+  }
+  &__item {
+    text-align: center;
+    margin-bottom: 43px;
+    font-weight: normal;
+    @include tablet {
+      height: 90px;
+      &:hover {
+        border-bottom: 3px solid #cc00c0;
+      }
+    }
+  }
+  &__link {
+    color: $light-color;
+    text-decoration: none;
+    font-size: 22px;
+    @include tablet {
+      color: $dark-color;
+      font-size: 16px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      padding: 0 0.7em;
+      width: 100%;
+    }
+    @include laptop {
+      padding: 0 1em;
+    }
+  }
+  &__link--active {
+    color: #cc00c0;
+  }
+}

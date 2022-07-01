@@ -1,0 +1,28 @@
+//Configuración guias de estilo
+@import "config/colors";
+@import "config/fonts";
+@import "config/container";
+
+
+//Mixins
+@import "mixins/breakpoints";
+@import "mixins/reset-list";
+@import "mixins/max-width.scss";
+
+
+//Estilos base
+@import "base/normalize";
+@import "base/base";
+
+//Bloques
+@import "blocks/toggle-menu";
+@import "blocks/header";
+@import "blocks/sidebar";
+@import "blocks/card";
+@import "blocks/footer";
+@import "blocks/swiper";
+
+
+
+//Pages
+@import "pages/index";

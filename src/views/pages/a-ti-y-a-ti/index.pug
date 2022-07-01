@@ -1,0 +1,26 @@
+extends ../../templates/template
+block head
+    link(rel="stylesheet" href="../css/styles.css")
+    title A Ti y A Ti
+    link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css')
+block menu
+    - pageActive = 'A Ti y A Ti'
+    include ../../includes/main-menu
+block main
+    .swiper.mySwiper
+        .swiper-wrapper
+            .swiper-slide
+                .swiper-container 
+                    .swiper-content 
+                        h2.swiper-content__title BIENVENIDOS A 
+                        img(src="/images/atiyati.png" alt="ati y ati")
+                        p.swiper-content__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            .swiper-slide
+                img(src="/images/cards/argentina.png" alt="Argentina")
+            .swiper-slide
+                img(src="/images/cards/brasil.png" alt="Argentina")
+        .swiper-button-next
+        .swiper-button-prev
+    include ../../includes/card
+block scripts 
+    script(src='https://unpkg.com/swiper/swiper-bundle.min.js')

@@ -1,0 +1,56 @@
+.toggle-menu {
+  height: 20px;
+  width: 25px;
+  margin: auto;
+  z-index: 10;
+  &__icon {
+    height: 20px;
+    width: 25px;
+    position: relative;
+
+    & .first-bar,
+    & .second-bar,
+    & .third-bar {
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      background: $primary-color;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+
+    & .first-bar {
+      top: 0;
+    }
+
+    & .second-bar {
+      top: 7.5px;
+    }
+
+    & .third-bar {
+      top: 15px;
+    }
+  }
+  .show {
+    .first-bar {
+      transform: rotate(-45deg);
+      top: 0.5rem;
+    }
+    .second-bar {
+      width: 0;
+    }
+    .third-bar {
+      transform: rotate(45deg);
+      top: 0.5rem;
+    }
+    .first-bar,
+    .second-bar,
+    .third-bar {
+      background: $light-color;
+    }
+  }
+
+  @include tablet{
+    display: none;
+  }
+}
